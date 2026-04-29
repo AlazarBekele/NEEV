@@ -38,6 +38,9 @@ def index (request):
 def student (request):
     return render (request, 'public/Pages/Students/Student.html')
 
+def about (request):
+    return render (request, 'public/Pages/About/about.html')
+
 def election (request):
     SingInForm = SignIn (request.POST or None)
 

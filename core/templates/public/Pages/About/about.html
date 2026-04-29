@@ -1,0 +1,191 @@
+{% extends "public/base.html" %}
+{% load static %}
+
+{% block title %}EVNP - About Platform{% endblock %}
+
+{% block NavCenter %}
+<div class="flex items-center gap-4 rounded-[24px] border border-slate-200 bg-white px-5 py-3 shadow-sm">
+    <div class="inter_Bold text-right">
+        <p class="text-xs uppercase tracking-[0.26em] text-slate-500">Platform</p>
+        <p class="text-2xl text-slate-900">About</p>
+    </div>
+    <div class="h-12 w-px bg-slate-200"></div>
+    <div class="inter_Bold">
+        <p class="text-xs uppercase tracking-[0.26em] text-slate-500">Overview</p>
+        <p class="text-2xl text-slate-900">Page Purposes</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block NavCenterMobile %}
+<div class="rounded-full border border-sky-100 bg-sky-50 px-5 py-2 shadow-sm">
+    <p class="inter_Bold text-sm uppercase tracking-[0.35em] text-sky-900">Platform About</p>
+</div>
+{% endblock %}
+
+{% block content %}
+<section class="mx-auto flex w-[96%] max-w-[1550px] flex-col gap-8 pb-10 pt-4 lg:gap-10">
+    <div class="overflow-hidden rounded-[34px] bg-linear-to-br from-slate-950 via-sky-950 to-cyan-700 text-white shadow-2xl shadow-sky-950/15">
+        <div class="grid gap-8 px-6 py-8 md:px-10 md:py-10 xl:grid-cols-[1.15fr_0.85fr]">
+            <div class="relative flex flex-col gap-6">
+                <div class="absolute left-[-60px] top-[-40px] h-36 w-36 rounded-full bg-cyan-300/10 blur-3xl"></div>
+                <div class="absolute bottom-[-85px] right-[10%] h-52 w-52 rounded-full bg-white/10 blur-3xl"></div>
+
+                <div class="relative flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.28em] text-sky-100/90">
+                    <span class="rounded-full border border-white/15 bg-white/10 px-4 py-2">E-Vote National Platform</span>
+                    <span class="rounded-full border border-emerald-300/30 bg-emerald-400/15 px-4 py-2 text-emerald-50">System Guide</span>
+                </div>
+
+                <div class="relative max-w-3xl">
+                    <h1 class="inter_Bold text-4xl leading-tight md:text-5xl xl:text-6xl">Understand what each page does and why it exists in the platform.</h1>
+                    <p class="mt-4 max-w-2xl text-sm leading-7 text-sky-50/85 md:text-base">
+                        This page explains the purpose of the major screens in the E-Vote National Platform so users, party representatives, and administrators can understand how the full election workflow is organized.
+                    </p>
+                </div>
+
+                <div class="relative grid gap-4 sm:grid-cols-3">
+                    <div class="rounded-[24px] border border-white/10 bg-white/10 p-5 backdrop-blur-sm">
+                        <p class="text-xs uppercase tracking-[0.25em] text-sky-100/70">Users</p>
+                        <p class="mt-3 inter_Bold text-lg">Citizens and party members</p>
+                    </div>
+                    <div class="rounded-[24px] border border-white/10 bg-white/10 p-5 backdrop-blur-sm">
+                        <p class="text-xs uppercase tracking-[0.25em] text-sky-100/70">Admins</p>
+                        <p class="mt-3 inter_Bold text-lg">Review and approval flow</p>
+                    </div>
+                    <div class="rounded-[24px] border border-white/10 bg-white/10 p-5 backdrop-blur-sm">
+                        <p class="text-xs uppercase tracking-[0.25em] text-sky-100/70">Goal</p>
+                        <p class="mt-3 inter_Bold text-lg">Transparent digital voting</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-stretch">
+                <div class="flex w-full flex-col justify-between rounded-[30px] border border-white/10 bg-white/10 p-6 backdrop-blur-md">
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.3em] text-sky-100/75">Platform Purpose</p>
+                        <h2 class="mt-4 inter_Bold text-3xl leading-tight">The system connects registration, approval, publishing, and voting in one place.</h2>
+                    </div>
+
+                    <div class="mt-6 space-y-4 text-sm leading-7 text-sky-50/85">
+                        <div class="rounded-[20px] bg-slate-950/20 px-4 py-4">
+                            Public users can learn about the platform, sign in, and review election information.
+                        </div>
+                        <div class="rounded-[20px] bg-slate-950/20 px-4 py-4">
+                            Party representatives can submit contest requests and receive approval tokens.
+                        </div>
+                        <div class="rounded-[20px] bg-slate-950/20 px-4 py-4">
+                            Administrators verify submissions before parties become available for public voting.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid gap-5 lg:grid-cols-2 2xl:grid-cols-3">
+        <article class="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.28em] text-sky-800">Home Page</p>
+            <h2 class="mt-3 inter_Bold text-3xl text-slate-900">Main Dashboard</h2>
+            <p class="mt-3 text-sm leading-7 text-slate-500">
+                The home page is the central entry point after login. Its purpose is to guide users through the platform, present important election-related information, and provide access to public resources and next actions.
+            </p>
+        </article>
+
+        <article class="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.28em] text-sky-800">Election Page</p>
+            <h2 class="mt-3 inter_Bold text-3xl text-slate-900">Login and Entry</h2>
+            <p class="mt-3 text-sm leading-7 text-slate-500">
+                The election page currently works as the sign-in page. Its purpose is to allow registered users to authenticate and enter the platform securely before accessing protected election functions.
+            </p>
+        </article>
+
+        <article class="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.28em] text-sky-800">Sign Up Page</p>
+            <h2 class="mt-3 inter_Bold text-3xl text-slate-900">Account Registration</h2>
+            <p class="mt-3 text-sm leading-7 text-slate-500">
+                The sign-up page is used to create a new user account. Its purpose is to onboard new participants so they can later sign in, interact with the system, and take part in election-related workflows.
+            </p>
+        </article>
+
+        <article class="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.28em] text-sky-800">Student Page</p>
+            <h2 class="mt-3 inter_Bold text-3xl text-slate-900">Sample Directory</h2>
+            <p class="mt-3 text-sm leading-7 text-slate-500">
+                The student page presents profile cards in a clean responsive layout. Its purpose is to display structured profile information in a readable way and can also serve as a design reference for future directory-style pages.
+            </p>
+        </article>
+
+        <article class="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.28em] text-sky-800">Competition Request</p>
+            <h2 class="mt-3 inter_Bold text-3xl text-slate-900">Party Submission Form</h2>
+            <p class="mt-3 text-sm leading-7 text-slate-500">
+                This page allows a party representative to submit party identity, leadership details, documents, and descriptions. Its purpose is to collect all information required before a party can be reviewed for election participation.
+            </p>
+        </article>
+
+        <article class="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.28em] text-sky-800">Admin Panel</p>
+            <h2 class="mt-3 inter_Bold text-3xl text-slate-900">Review Center</h2>
+            <p class="mt-3 text-sm leading-7 text-slate-500">
+                The admin panel lists submitted party requests for staff users. Its purpose is to give administrators a controlled space to inspect requests and decide whether they should move forward in the process.
+            </p>
+        </article>
+
+        <article class="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.28em] text-sky-800">Request Approval Page</p>
+            <h2 class="mt-3 inter_Bold text-3xl text-slate-900">Decision Stage</h2>
+            <p class="mt-3 text-sm leading-7 text-slate-500">
+                This page shows the detailed request information to administrators. Its purpose is to support a careful approval decision before an approval token is generated for the requesting party.
+            </p>
+        </article>
+
+        <article class="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.28em] text-sky-800">Token Page</p>
+            <h2 class="mt-3 inter_Bold text-3xl text-slate-900">Approval Confirmation</h2>
+            <p class="mt-3 text-sm leading-7 text-slate-500">
+                The token page displays the generated approval token for the authorized user. Its purpose is to securely confirm that a request was approved and provide the controlled token needed in the next step of the workflow.
+            </p>
+        </article>
+
+        <article class="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.28em] text-sky-800">User Token Page</p>
+            <h2 class="mt-3 inter_Bold text-3xl text-slate-900">User Access to Token</h2>
+            <p class="mt-3 text-sm leading-7 text-slate-500">
+                This page allows the approved user to view their active token. Its purpose is to connect the approval process with the user-facing side of the platform in a secure and traceable way.
+            </p>
+        </article>
+
+        <article class="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.28em] text-sky-800">Party Publish Page</p>
+            <h2 class="mt-3 inter_Bold text-3xl text-slate-900">Public Availability</h2>
+            <p class="mt-3 text-sm leading-7 text-slate-500">
+                The party publish page shows approved parties that are ready for public visibility. Its purpose is to make verified party profiles available before they appear in the voting stage.
+            </p>
+        </article>
+
+        <article class="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.28em] text-sky-800">Vote Page</p>
+            <h2 class="mt-3 inter_Bold text-3xl text-slate-900">Party Selection</h2>
+            <p class="mt-3 text-sm leading-7 text-slate-500">
+                The vote page displays the list of published and approved parties. Its purpose is to let users review eligible choices before continuing to the final vote review and submission experience.
+            </p>
+        </article>
+
+        <article class="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm">
+            <p class="text-xs uppercase tracking-[0.28em] text-sky-800">Review Vote Page</p>
+            <h2 class="mt-3 inter_Bold text-3xl text-slate-900">Final Check Before Voting</h2>
+            <p class="mt-3 text-sm leading-7 text-slate-500">
+                The review vote page focuses on a single party record. Its purpose is to give voters a final chance to inspect the selected party details before the vote is submitted through the API.
+            </p>
+        </article>
+    </div>
+
+    <div class="rounded-[32px] border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+        <p class="text-xs uppercase tracking-[0.3em] text-sky-800">Overall Mission</p>
+        <h2 class="mt-3 inter_Bold text-4xl text-slate-900">Why this platform exists</h2>
+        <p class="mt-4 max-w-5xl text-sm leading-8 text-slate-500 md:text-base">
+            The E-Vote National Platform is designed to support a structured digital election process. Its purpose is to help manage identity, party participation, approval flow, publication, and final voting in a more transparent, organized, and efficient way than a disconnected manual system.
+        </p>
+    </div>
+</section>
+{% endblock %}

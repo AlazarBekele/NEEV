@@ -15,7 +15,8 @@ from .views import (
     vote_page,
     review_vote,
     VoteAPIView,
-    student
+    student,
+    about
 )
 
 from django.conf import settings
@@ -35,6 +36,7 @@ urlpatterns = [
     path ('compitition_request/', compition_request, name='Compition_Request'),
     path ('admin-panel/<str:username>/', admin_panel, name='Admin_Panel'),
     path ('student/', student, name='Student'),
+    path ('about_us/', about, name='About_us'),
     path ('request-edit/<int:id>', request_approvement, name='Request_Approvement'),
     path ('acceptance_success/<int:id>/', approve_page, name='Acceptanc_token_Page'),
     path ('acceptanc_token_page/<int:id>/', acceptanc_token_page, name='Acceptanc_Token_Page'),
