@@ -104,6 +104,7 @@ class Comptition_request(forms.ModelForm):
             "want_lead",
             "party_info_PDF",
             "party_discription",
+            "party_logo_url"
         ]
         label = ''
         
@@ -138,5 +139,10 @@ class Comptition_request(forms.ModelForm):
 
             'party_logo': forms.ClearableFileInput(attrs={
                 'class': 'w-full bg-sky-50 rounded-lg p-6 shadow-sm'
+            }),
+            
+            'party_logo_url': forms.URLInput(attrs={
+                'class': 'w-full h-[60px] bg-sky-50 rounded-lg pl-6 shadow-sm',
+                'placeholder': 'Optional: (Paste Image Url)'
             }),
         }

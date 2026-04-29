@@ -80,6 +80,7 @@ class Comptition_Request_model (models.Model):
     party_discription = models.TextField ()
     party_info_PDF = models.FileField (upload_to='Parties/PDF/')
     party_logo = models.ImageField (upload_to='Parties_logo/')
+    party_logo_url = models.URLField (blank=True, null=True)
 
     slug = models.SlugField (unique=True, null=True, blank=True)
 
