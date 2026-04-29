@@ -80,10 +80,15 @@
                                 <div class="absolute right-5 top-5 rounded-full bg-emerald-400/20 px-3 py-1 text-[11px] uppercase tracking-[0.28em] text-emerald-50">
                                     Approved
                                 </div>
-
-                                <div class="relative flex h-[160px] w-[160px] items-center justify-center rounded-[26px] border border-white/15 bg-white/10 p-5 shadow-lg shadow-slate-950/20 backdrop-blur-sm">
-                                    <img class="max-h-full w-auto object-contain" src="{{ votes.party_logo.url }}" alt="{{ votes.party_FullName }} logo">
-                                </div>
+                                {% if party_logo %}
+                                    <div class="relative flex h-[160px] w-[160px] items-center justify-center rounded-[26px] border border-white/15 bg-white/10 p-5 shadow-lg shadow-slate-950/20 backdrop-blur-sm">
+                                        <img class="max-h-full w-auto object-contain" src="{{ votes.party_logo.url }}" alt="{{ votes.party_FullName }} logo">
+                                    </div>
+                                {% else %}
+                                    <div class="relative flex h-[160px] w-[160px] items-center justify-center rounded-[26px] border border-white/15 bg-white/10 p-5 shadow-lg shadow-slate-950/20 backdrop-blur-sm">
+                                        <img class="max-h-full w-auto object-contain" src="{{ votes.party_logo_url.url }}" alt="{{ votes.party_FullName }} logo">
+                                    </div>
+                                {% endif %}
                             </div>
 
                             <div class="relative flex flex-col gap-5 p-6">
