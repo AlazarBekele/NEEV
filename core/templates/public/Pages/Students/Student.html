@@ -1,0 +1,187 @@
+{% extends "public/base.html" %}
+{% load static %}
+
+{% block title %}EVNP - Student Overview{% endblock %}
+
+{% block NavCenter %}
+<div class="flex items-center gap-4 rounded-[24px] border border-slate-200 bg-white px-5 py-3 shadow-sm">
+    <div class="inter_Bold text-right">
+        <p class="text-xs uppercase tracking-[0.26em] text-slate-500">Student</p>
+        <p class="text-2xl text-slate-900">Directory</p>
+    </div>
+    <div class="h-12 w-px bg-slate-200"></div>
+    <div class="inter_Bold">
+        <p class="text-xs uppercase tracking-[0.26em] text-slate-500">Overview</p>
+        <p class="text-2xl text-slate-900">Featured Profiles</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block NavCenterMobile %}
+<div class="rounded-full border border-sky-100 bg-sky-50 px-5 py-2 shadow-sm">
+    <p class="inter_Bold text-sm uppercase tracking-[0.35em] text-sky-900">Student Directory</p>
+</div>
+{% endblock %}
+
+{% block content %}
+<section class="mx-auto flex w-[96%] max-w-[1550px] flex-col gap-8 pb-10 pt-4 lg:gap-10">
+    <div class="overflow-hidden rounded-[34px] bg-linear-to-br from-slate-950 via-sky-950 to-cyan-700 text-white shadow-2xl shadow-sky-950/15">
+        <div class="grid gap-8 px-6 py-8 md:px-10 md:py-10 xl:grid-cols-[1.15fr_0.85fr]">
+            <div class="relative flex flex-col gap-6">
+                <div class="absolute left-[-60px] top-[-40px] h-36 w-36 rounded-full bg-cyan-300/10 blur-3xl"></div>
+                <div class="absolute bottom-[-85px] right-[10%] h-52 w-52 rounded-full bg-white/10 blur-3xl"></div>
+
+                <div class="relative flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.28em] text-sky-100/90">
+                    <span class="rounded-full border border-white/15 bg-white/10 px-4 py-2">Student Profiles</span>
+                    <span class="rounded-full border border-emerald-300/30 bg-emerald-400/15 px-4 py-2 text-emerald-50">Responsive Layout</span>
+                </div>
+
+                <div class="relative max-w-3xl">
+                    <h1 class="inter_Bold text-4xl leading-tight md:text-5xl xl:text-6xl">Explore student profiles in a cleaner and more readable layout.</h1>
+                    <p class="mt-4 max-w-2xl text-sm leading-7 text-sky-50/85 md:text-base">
+                        This page highlights a small set of student records using responsive cards instead of a fixed table, making the content easier to browse on phones, tablets, and desktops.
+                    </p>
+                </div>
+
+                <div class="relative grid gap-4 sm:grid-cols-3">
+                    <div class="rounded-[24px] border border-white/10 bg-white/10 p-5 backdrop-blur-sm">
+                        <p class="text-xs uppercase tracking-[0.25em] text-sky-100/70">Profiles</p>
+                        <p class="mt-3 inter_Bold text-4xl">5</p>
+                    </div>
+                    <div class="rounded-[24px] border border-white/10 bg-white/10 p-5 backdrop-blur-sm">
+                        <p class="text-xs uppercase tracking-[0.25em] text-sky-100/70">Layout</p>
+                        <p class="mt-3 inter_Bold text-lg">Card Based</p>
+                    </div>
+                    <div class="rounded-[24px] border border-white/10 bg-white/10 p-5 backdrop-blur-sm">
+                        <p class="text-xs uppercase tracking-[0.25em] text-sky-100/70">Experience</p>
+                        <p class="mt-3 inter_Bold text-lg">Mobile Ready</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-stretch">
+                <div class="flex w-full flex-col justify-between rounded-[30px] border border-white/10 bg-white/10 p-6 backdrop-blur-md">
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.3em] text-sky-100/75">Student Notes</p>
+                        <h2 class="mt-4 inter_Bold text-3xl leading-tight">A visual profile grid works better than a fixed row table.</h2>
+                    </div>
+
+                    <div class="mt-6 space-y-4 text-sm leading-7 text-sky-50/85">
+                        <div class="rounded-[20px] bg-slate-950/20 px-4 py-4">
+                            Every student is displayed in its own card so names, avatars, and numbers stay readable on smaller screens.
+                        </div>
+                        <div class="rounded-[20px] bg-slate-950/20 px-4 py-4">
+                            The grid automatically adjusts from one column on mobile to multiple columns on wider screens.
+                        </div>
+                        <div class="rounded-[20px] bg-slate-950/20 px-4 py-4">
+                            This structure is also much easier to connect to dynamic Django data later.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+        <article class="group relative overflow-hidden rounded-[30px] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-200/70">
+            <div class="absolute right-[-30px] top-[-30px] h-36 w-36 rounded-full bg-sky-100 blur-3xl transition duration-300 group-hover:bg-cyan-100"></div>
+            <div class="relative flex flex-col gap-5 p-6">
+                <div class="flex items-start justify-between gap-4">
+                    <div class="flex items-center gap-4">
+                        <img class="h-20 w-20 rounded-[24px] object-cover shadow-md" src="https://res.cloudinary.com/dvvcxr7hv/image/upload/v1777502153/androgynous-avatar-non-binary-queer-person_f1qjoc.jpg" alt="Blen Efrem profile">
+                        <div>
+                            <p class="inter_Bold text-2xl text-slate-900">Blen Efrem</p>
+                            <p class="mt-1 text-sm text-slate-500">Student Profile</p>
+                        </div>
+                    </div>
+                    <span class="rounded-full bg-sky-50 px-3 py-2 text-xs uppercase tracking-[0.24em] text-sky-900">06</span>
+                </div>
+                <div class="rounded-[24px] bg-slate-50 p-4 text-sm text-slate-600">
+                    <p class="inter_Bold text-slate-900">Profile Summary</p>
+                    <p class="mt-2 leading-6">Included in the featured student list with a clean and compact card presentation.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="group relative overflow-hidden rounded-[30px] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-200/70">
+            <div class="absolute right-[-30px] top-[-30px] h-36 w-36 rounded-full bg-sky-100 blur-3xl transition duration-300 group-hover:bg-cyan-100"></div>
+            <div class="relative flex flex-col gap-5 p-6">
+                <div class="flex items-start justify-between gap-4">
+                    <div class="flex items-center gap-4">
+                        <img class="h-20 w-20 rounded-[24px] object-cover shadow-md" src="https://res.cloudinary.com/dvvcxr7hv/image/upload/v1777502153/androgynous-avatar-non-binary-queer-person_f1qjoc.jpg" alt="Rabia Muhamed profile">
+                        <div>
+                            <p class="inter_Bold text-2xl text-slate-900">Rabia Muhamed</p>
+                            <p class="mt-1 text-sm text-slate-500">Student Profile</p>
+                        </div>
+                    </div>
+                    <span class="rounded-full bg-sky-50 px-3 py-2 text-xs uppercase tracking-[0.24em] text-sky-900">35</span>
+                </div>
+                <div class="rounded-[24px] bg-slate-50 p-4 text-sm text-slate-600">
+                    <p class="inter_Bold text-slate-900">Profile Summary</p>
+                    <p class="mt-2 leading-6">Presented in a responsive card that keeps the student details readable across device sizes.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="group relative overflow-hidden rounded-[30px] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-200/70">
+            <div class="absolute right-[-30px] top-[-30px] h-36 w-36 rounded-full bg-sky-100 blur-3xl transition duration-300 group-hover:bg-cyan-100"></div>
+            <div class="relative flex flex-col gap-5 p-6">
+                <div class="flex items-start justify-between gap-4">
+                    <div class="flex items-center gap-4">
+                        <img class="h-20 w-20 rounded-[24px] object-cover shadow-md" src="https://res.cloudinary.com/dvvcxr7hv/image/upload/v1777502153/androgynous-avatar-non-binary-queer-person_f1qjoc.jpg" alt="Haleluya Mebrate profile">
+                        <div>
+                            <p class="inter_Bold text-2xl text-slate-900">Haleluya Mebrate</p>
+                            <p class="mt-1 text-sm text-slate-500">Student Profile</p>
+                        </div>
+                    </div>
+                    <span class="rounded-full bg-sky-50 px-3 py-2 text-xs uppercase tracking-[0.24em] text-sky-900">19</span>
+                </div>
+                <div class="rounded-[24px] bg-slate-50 p-4 text-sm text-slate-600">
+                    <p class="inter_Bold text-slate-900">Profile Summary</p>
+                    <p class="mt-2 leading-6">The card layout gives this profile enough spacing for a more polished visual presentation.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="group relative overflow-hidden rounded-[30px] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-200/70">
+            <div class="absolute right-[-30px] top-[-30px] h-36 w-36 rounded-full bg-sky-100 blur-3xl transition duration-300 group-hover:bg-cyan-100"></div>
+            <div class="relative flex flex-col gap-5 p-6">
+                <div class="flex items-start justify-between gap-4">
+                    <div class="flex items-center gap-4">
+                        <img class="h-20 w-20 rounded-[24px] object-cover shadow-md" src="https://res.cloudinary.com/dvvcxr7hv/image/upload/v1777502153/androgynous-avatar-non-binary-queer-person_f1qjoc.jpg" alt="Selamawit Melaku profile">
+                        <div>
+                            <p class="inter_Bold text-2xl text-slate-900">Selamawit Melaku</p>
+                            <p class="mt-1 text-sm text-slate-500">Student Profile</p>
+                        </div>
+                    </div>
+                    <span class="rounded-full bg-sky-50 px-3 py-2 text-xs uppercase tracking-[0.24em] text-sky-900">40</span>
+                </div>
+                <div class="rounded-[24px] bg-slate-50 p-4 text-sm text-slate-600">
+                    <p class="inter_Bold text-slate-900">Profile Summary</p>
+                    <p class="mt-2 leading-6">Information now flows naturally in vertical space instead of being squeezed into a table cell.</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="group relative overflow-hidden rounded-[30px] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-200/70">
+            <div class="absolute right-[-30px] top-[-30px] h-36 w-36 rounded-full bg-sky-100 blur-3xl transition duration-300 group-hover:bg-cyan-100"></div>
+            <div class="relative flex flex-col gap-5 p-6">
+                <div class="flex items-start justify-between gap-4">
+                    <div class="flex items-center gap-4">
+                        <img class="h-20 w-20 rounded-[24px] object-cover shadow-md" src="https://res.cloudinary.com/dvvcxr7hv/image/upload/v1777502153/androgynous-avatar-non-binary-queer-person_f1qjoc.jpg" alt="Tomas Werkneh profile">
+                        <div>
+                            <p class="inter_Bold text-2xl text-slate-900">Tomas Werkneh</p>
+                            <p class="mt-1 text-sm text-slate-500">Student Profile</p>
+                        </div>
+                    </div>
+                    <span class="rounded-full bg-sky-50 px-3 py-2 text-xs uppercase tracking-[0.24em] text-sky-900">47</span>
+                </div>
+                <div class="rounded-[24px] bg-slate-50 p-4 text-sm text-slate-600">
+                    <p class="inter_Bold text-slate-900">Profile Summary</p>
+                    <p class="mt-2 leading-6">This final card keeps the same system so the page feels consistent and easy to scan.</p>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+{% endblock %}

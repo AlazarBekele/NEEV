@@ -35,6 +35,9 @@ def index (request):
         token = Approvement_Token.objects.filter(user=request.user).first()
     return render (request, 'public/Pages/index.html', { 'token' : token })
 
+def student (request):
+    return render (request, 'public/Pages/Students/Student.html')
+
 def election (request):
     SingInForm = SignIn (request.POST or None)
 
